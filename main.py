@@ -44,7 +44,7 @@ if __name__ == "__main__":
     parser.add_argument('--beta2', type=float, default=0.999, help='beta2 for Adam optimizer')
     parser.add_argument('--d_lr', type=float, default=0.0001,help='learning rate for D')
 
-    parser.add_argument('--image_dir', type=str, default='data/test')
+    parser.add_argument('--image_dir', type=str, default='./data')
 
     config = parser.parse_args()
     main(config)
