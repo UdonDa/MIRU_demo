@@ -13,14 +13,15 @@ def main(config):
                                  config.image_crop_size, config.image_size, config.batch_size, config.num_workers)
     solver = Solver(data_loader, config)
 
+    solver.test()
 
-    cap = cv2.VideoCapture(0)
-    while(True):
-        ret, frame = cap.read()
-        cv2.imshow('frame', frame)
-        if cv2.waitKey(1) == 27:
-            # To stop camera, press Escape key.
-            break
+    # cap = cv2.VideoCapture(0)
+    # while(True):
+    #     ret, frame = cap.read()
+    #     cv2.imshow('frame', frame)
+    #     if cv2.waitKey(1) == 27:
+    #         # To stop camera, press Escape key.
+    #         break
 
 
 

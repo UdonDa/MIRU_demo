@@ -27,7 +27,9 @@ class Solver(object):
         self.d_repeat_num = config.d_repeat_num
         self.d_lr = config.d_lr
         self.device = torch.cuda.device('cuda' if torch.cuda.is_available() else 'cpu')
-        self.data_loader = data_loader 
+        self.data_loader = data_loader
+
+        self.build_model()
         
     
     def restore_model(self, resume_iters):
