@@ -55,7 +55,7 @@ class Solver(object):
             self.D.parameters(), self.d_lr, [self.beta1, self.beta2])
 
         print("--------------------------------------------")
-        print("type(self.G) : {}".format(self.G))
+        print("type(self.G) : {}".format(type(self.G)))
         print("--------------------------------------------")
         self.G.to(self.device)
         self.D.to(self.device)
