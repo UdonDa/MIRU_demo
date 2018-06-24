@@ -26,7 +26,7 @@ class Solver(object):
         self.d_conv_dim = config.d_conv_dim
         self.d_repeat_num = config.d_repeat_num
         self.d_lr = config.d_lr
-        self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        self.device = torch.cuda.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.data_loader = data_loader 
         
     
