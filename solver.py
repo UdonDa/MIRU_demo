@@ -54,6 +54,7 @@ class Solver(object):
         self.d_optimizer = torch.optim.Adam(
             self.D.parameters(), self.d_lr, [self.beta1, self.beta2])
 
+        print("type(self.G) : {}".format(self.G))
         self.G.to(self.device)
         self.D.to(self.device)
 
