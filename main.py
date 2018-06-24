@@ -3,8 +3,8 @@ import argparse
 
 import cv2
 import torch
-from src.data_loader import get_loader
-from src.solver import Solver
+from data_loader import get_loader
+from solver import Solver
 
 def main(config):
 
