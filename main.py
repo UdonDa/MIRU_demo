@@ -9,7 +9,7 @@ from src.solver import Solver
 def main(config):
 
     # Data Loader
-    data_loader = get_loader(config.rafd_image_dir, None, None,
+    data_loader = get_loader(config.image_dir, None, None,
                                  config.image_crop_size, config.image_size, config.batch_size, config.num_workers)
     solver = Solver(data_loader, config)
 
@@ -43,6 +43,8 @@ if __name__ == "__main__":
     parser.add_argument('--beta1', type=float, default=0.5, help='beta1 for Adam optimizer')
     parser.add_argument('--beta2', type=float, default=0.999, help='beta2 for Adam optimizer')
     parser.add_argument('--d_lr', type=float, default=0.0001,help='learning rate for D')
+
+    parser.add_argument('--rafd_image_dir', type=str, default='data/test')
 
     config = parser.parse_args()
     main(config)

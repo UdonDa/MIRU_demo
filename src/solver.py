@@ -1,4 +1,4 @@
-from model import Generator, Discriminator
+from .model import Generator, Discriminator
 from torch.autograd import Variable
 from torchvision.utils import save_image
 import torch.nn as nn
